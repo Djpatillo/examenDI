@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example._examendi.Controller.MainAdminController"
+            prefHeight="400.0" prefWidth="600.0">
+    <center>
+        <TableView fx:id="tablaVideojuegos">
+            <TableColumn fx:id="colTitulo" text="Título"/>
+            <TableColumn fx:id="colCompletado" text="Completado"/>
+            <TableColumn fx:id="colFecha" text="Fecha"/>
+        </TableView>
+        <HBox>
+            <Label fx:id="tituloLabel" text="Titulo" style="--block-font-family: 15"/>
+            <TextField fx:id="titulo" style="-fx-max-width: 150"/>
+            <Label fx:id="completadoLabel" style="--block-font-family: 15"/>
+            <CheckBox fx:id="completado"/>
+            <Label fx:id="fechaLabel" text="Fecha"/>
+            <DatePicker fx:id="fecha" />
+
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox>
+            <Button fx:id="favorito" onAction="#handleFavorito"/>
+            <Button fx:id="anadir" onAction="#hanldeAnadir" />
+            <Button fx:id="eliminar" onAction="#handleEliminar"/>
+        </HBox>
+
+    </bottom>
+
+
+</BorderPane>
